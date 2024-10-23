@@ -1,0 +1,19 @@
+fib :: Int -> Int
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n - 1) + fib (n - 2)
+
+main = print (fib 10)  -- Example: 10th Fibonacci number
+
+
+factorial :: Int -> Int
+factorial 0 = 1
+factorial n = n * factorial (n - 1)
+
+main = print (factorial 5)  -- Example: Factorial of 5
+
+sumN :: Int -> Int
+sumN 0 = 0
+sumN n = n + sumN (n - 1)
+
+main = print (sumN 10)  -- Example: Sum of first 10 natural numbers

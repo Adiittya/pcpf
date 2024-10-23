@@ -1,0 +1,9 @@
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
+main = print (applyTwice (+3) 10)  -- Example: Applying (+3) twice to 10
+
+flip' :: (a -> b -> c) -> (b -> a -> c)
+flip' f x y = f y x
+
+main = print (flip' (/) 2 10)  -- Example: Flips division, resulting in 10/2

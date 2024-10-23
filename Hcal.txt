@@ -1,0 +1,15 @@
+main = do
+    putStrLn "PLEASE ENTER THE FIRST NUMBER: "
+    firstStr <- getLine
+    putStrLn "PLEASE ENTER THE SECOND NUMBER: "
+    secondStr <- getLine
+    let firstNumber = read firstStr :: Double
+    let secondNumber = read secondStr :: Double
+    let total = firstNumber + secondNumber
+    putStrLn ("THE SUM OF TWO NUMBERS IS: " ++ show total)
+    let difference = firstNumber - secondNumber
+    putStrLn ("THE DIFFERENCE OF TWO NUMBERS IS: " ++ show difference)
+    let multiplication = firstNumber * secondNumber
+    putStrLn ("THE MULTIPLICATION OF TWO NUMBERS IS: " ++ show multiplication)
+    let division = firstNumber / secondNumber
+    putStrLn ("THE DIVISION OF TWO NUMBERS IS: " ++ show division)

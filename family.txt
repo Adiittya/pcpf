@@ -1,0 +1,27 @@
+male(siddhesh).
+male(shantaram).
+female(shruti).
+female(prajakta).
+female(yugandhara).
+female(sunita).
+
+father_of(shantaram, siddhesh).
+father_of(shantaram, shruti).
+father_of(shantaram, prajkta).
+father_of(shantaram, yugandhara).
+
+mother_of(sunita, siddhesh).
+mother_of(sunita, shruti).
+mother_of(sunita, prajkta).
+mother_of(sunita, yugandhara).
+
+husband(shantaram, sunita).
+wife(sunita, shantaram).
+
+son_of(X,Y) :- father_of(Y,X),male(X).
+son_of(X,Y) :- mother_of(Y,X),male(X).
+daughter_of(X,Y) :- father_of(Y,X),female(X).
+daughter_of(X,Y) :- mother_of(Y,X),female(X).
+parent_of(X, Y) :- father_of(X, Y); mother_of(X, Y).
+siblings(X, Y) :-parent_of(shantaram, X);parent_of(sunita, Y).
+spouse(X, Y) :- husband(X, Y); wife(X, Y).

@@ -1,0 +1,10 @@
+?- [X,Y,Z] = [SID,KETAN,KARTHIK].
+X = SID,
+Y = KETAN,
+Z = KARTHIK.
+
+
+?- [[the, Y] | Z] = [[X, mine], [is, there]].
+Y = mine,
+Z = [[is, there]],
+X = the.

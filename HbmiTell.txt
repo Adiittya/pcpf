@@ -1,0 +1,6 @@
+bmiTell :: (RealFloat a) => a->String
+bmiTell bmi
+   | bmi <= 18.5 = "YOU ARE UNDERWEIGHT!"
+   | bmi <= 25.0 = "YOU SUPPOSELY NORMAL PIFFT, I BET YOU'RE UGLY!"
+   | bmi <= 30.0 = "YOU ARE FAT, LOSE SOME WEIGHT FATTY!"
+   | otherwise = "YOU ARE A WHALE ,  CONGRATULATIONS!"
