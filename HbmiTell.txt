@@ -1,6 +1,16 @@
-bmiTell :: (RealFloat a) => a->String
-bmiTell bmi
-   | bmi <= 18.5 = "YOU ARE UNDERWEIGHT!"
-   | bmi <= 25.0 = "YOU SUPPOSELY NORMAL PIFFT, I BET YOU'RE UGLY!"
-   | bmi <= 30.0 = "YOU ARE FAT, LOSE SOME WEIGHT FATTY!"
-   | otherwise = "YOU ARE A WHALE ,  CONGRATULATIONS!"
+bmi :: Float -> Float -> String
+bmi weight height
+    | bmiValue <= 18.5 = "Underweight"
+    | bmiValue <= 24.9 = "Normal weight"
+    | bmiValue <= 29.9 = "Overweight"
+    | otherwise        = "Obesity"
+    where bmiValue = weight / (height * height)
+
+main = do
+    putStrLn "Enter weight (kg): "
+    w <- getLine
+    putStrLn "Enter height (m): "
+    h <- getLine
+    let weight = read w :: Float
+    let height = read h :: Float
+    putStrLn ("BMI Category: " ++ bmi weight height)
